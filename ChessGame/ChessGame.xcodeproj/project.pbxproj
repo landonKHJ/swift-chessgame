@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4440E26E28644BD200E03E6B /* King.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4440E26D28644BD200E03E6B /* King.swift */; };
+		4440E26F28644BD400E03E6B /* King.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4440E26D28644BD200E03E6B /* King.swift */; };
 		5F845008286446F500E93673 /* ChessGameUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F845007286446F500E93673 /* ChessGameUnitTest.swift */; };
 		5F84500C286446FD00E93673 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F844FFA286446C400E93673 /* main.swift */; };
 		5F84500D286446FD00E93673 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F844FFA286446C400E93673 /* main.swift */; };
@@ -25,6 +27,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4440E26D28644BD200E03E6B /* King.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = King.swift; sourceTree = "<group>"; };
 		5F844FF7286446C400E93673 /* ChessGame */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ChessGame; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F844FFA286446C400E93673 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		5F845005286446F500E93673 /* ChessGameUnitTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChessGameUnitTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				5F844FFA286446C400E93673 /* main.swift */,
+				4440E26D28644BD200E03E6B /* King.swift */,
 			);
 			path = ChessGame;
 			sourceTree = "<group>";
@@ -172,6 +176,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4440E26E28644BD200E03E6B /* King.swift in Sources */,
 				5F84500D286446FD00E93673 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -182,6 +187,7 @@
 			files = (
 				5F84500C286446FD00E93673 /* main.swift in Sources */,
 				5F845008286446F500E93673 /* ChessGameUnitTest.swift in Sources */,
+				4440E26F28644BD400E03E6B /* King.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
