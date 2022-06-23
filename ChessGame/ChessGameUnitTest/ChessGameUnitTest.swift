@@ -10,10 +10,12 @@ import XCTest
 class ChessGameUnitTest: XCTestCase {
 
     
-    var king: King!
+    var whiteKing: King!
+    var blackKing: King!
     
     override func setUpWithError() throws {
-        king = King(color: .white)
+        whiteKing = King(color: .white)
+        blackKing = King(color: .black)
     }
 
     override func tearDownWithError() throws {
@@ -21,7 +23,8 @@ class ChessGameUnitTest: XCTestCase {
     }
 
     func testColorFromKing() throws {
-        XCTAssertTrue(king.color == .white)
+        XCTAssertTrue(whiteKing.color == .white)
+        XCTAssertTrue(blackKing.color == .black)
     }
     
     func testPositionFromKing() throws {
@@ -30,9 +33,51 @@ class ChessGameUnitTest: XCTestCase {
         let position = "D8"
         
         // then
-        XCTAssertEqual(king.postion.origin, position)
+        XCTAssertEqual(whiteKing.postion.origin, position)
+    }
+    
+    func testPostionFromBlackKing() throws {
+        
+        let position = "D1"
+        
+        XCTAssertEqual(blackKing.postion.origin, position)
     }
 
+    func testEqualKings() throws {
+       
+        XCTAssertFalse(whiteKing == blackKing)
+        XCTAssertTrue(blackKing == blackKing)
+    }
+    
+    func testMovingPostionFromWhiteKing() throws {
+        
+        XCTAssertTrue(whiteKing.enableMovePosition(.down))
+        XCTAssertFalse(whiteKing.enableMovePosition(.up))
+        
+        XCTAssertTrue(whiteKing.enableMovePosition(.left))
+        XCTAssertTrue(whiteKing.enableMovePosition(.right))
+        
+        XCTAssertFalse(whiteKing.enableMovePosition(.rightUp))
+        XCTAssertFalse(whiteKing.enableMovePosition(.leftUp))
+        
+        XCTAssertTrue(whiteKing.enableMovePosition(.rightDown))
+        XCTAssertTrue(whiteKing.enableMovePosition(.leftDown))
+    }
+    
+    func testMovingPostionFromBlackKing() throws {
+        XCTAssertFalse(blackKing.enableMovePosition(.down))
+        XCTAssertTrue(blackKing.enableMovePosition(.up))
+        
+        XCTAssertTrue(blackKing.enableMovePosition(.left))
+        XCTAssertTrue(blackKing.enableMovePosition(.right))
+        
+        XCTAssertTrue(blackKing.enableMovePosition(.rightUp))
+        XCTAssertTrue(blackKing.enableMovePosition(.leftUp))
+        
+        XCTAssertFalse(blackKing.enableMovePosition(.rightDown))
+        XCTAssertFalse(blackKing.enableMovePosition(.leftDown))
+    }
+    
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
         measure {

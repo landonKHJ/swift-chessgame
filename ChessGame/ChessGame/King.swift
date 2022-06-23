@@ -41,6 +41,10 @@ struct Position {
     }
 }
 
+class ChessBoard {
+    static let sizeOfFile:Int = 8
+}
+
 enum Moving {
     case leftUp
     case left
@@ -94,7 +98,7 @@ class King {
 
 extension Int {
     var enableMoveInBoard: Bool {
-        return self >= 1 && self <= 8
+        return self >= 1 && self <= ChessBoard.sizeOfFile
     }
 }
 
