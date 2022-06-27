@@ -51,6 +51,14 @@ class swift_chessgameTests: XCTestCase {
         XCTAssertTrue(game.score(color: .White) == 39)
         XCTAssertTrue(game.score(color: .Black) == 39)
     }
+    
+    func testInitializePosition() throws {
+        if let test = Position("H5") {
+            XCTAssertTrue(test.file == 7)
+            XCTAssertTrue(test.rank == 4)
+            XCTAssertTrue(test.origin == "H5")
+        }
+    }
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.

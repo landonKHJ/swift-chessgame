@@ -34,7 +34,19 @@ public enum PieceColor {
     case Black
 }
 
-public class Piece {
+protocol PieceStub {
+    
+    var color: PieceColor { get set }
+    var type: PiecesType { get set }
+    var score: Int { get }
+    
+    func display() -> String
+}
+
+
+
+public class Piece: PieceStub {
+    var score: Int { self.type.score }
     
     var type: PiecesType = .Pawn
     var color: PieceColor = .White
@@ -52,7 +64,7 @@ public class Piece {
      
      */
     
-    func display() -> Character {
+    func display() -> String {
         if self.color == .White {
             switch self.type {
                 case .Pawn:     return "♙"

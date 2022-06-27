@@ -16,6 +16,8 @@
 		44167A4A28605E1A0005873B /* swift_chessgameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44167A4928605E1A0005873B /* swift_chessgameTests.swift */; };
 		44167A6328605E410005873B /* ChessBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44167A6228605E410005873B /* ChessBoard.swift */; };
 		44167A6628606E9A0005873B /* Piece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44167A6528606E9A0005873B /* Piece.swift */; };
+		44541E1528698D3000F89BAA /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44541E1428698D3000F89BAA /* Position.swift */; };
+		44541E19286990C200F89BAA /* PieceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44541E18286990C200F89BAA /* PieceCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +43,8 @@
 		44167A4928605E1A0005873B /* swift_chessgameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_chessgameTests.swift; sourceTree = "<group>"; };
 		44167A6228605E410005873B /* ChessBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessBoard.swift; sourceTree = "<group>"; };
 		44167A6528606E9A0005873B /* Piece.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Piece.swift; sourceTree = "<group>"; };
+		44541E1428698D3000F89BAA /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
+		44541E18286990C200F89BAA /* PieceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieceCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,8 +109,10 @@
 		44167A6428606E430005873B /* Chess */ = {
 			isa = PBXGroup;
 			children = (
+				44541E1428698D3000F89BAA /* Position.swift */,
 				44167A6228605E410005873B /* ChessBoard.swift */,
 				44167A6528606E9A0005873B /* Piece.swift */,
+				44541E18286990C200F89BAA /* PieceCollectionViewCell.swift */,
 			);
 			path = Chess;
 			sourceTree = "<group>";
@@ -214,6 +220,8 @@
 			files = (
 				44167A6628606E9A0005873B /* Piece.swift in Sources */,
 				44167A3728605E180005873B /* ViewController.swift in Sources */,
+				44541E19286990C200F89BAA /* PieceCollectionViewCell.swift in Sources */,
+				44541E1528698D3000F89BAA /* Position.swift in Sources */,
 				44167A6328605E410005873B /* ChessBoard.swift in Sources */,
 				44167A3328605E180005873B /* AppDelegate.swift in Sources */,
 				44167A3528605E180005873B /* SceneDelegate.swift in Sources */,
