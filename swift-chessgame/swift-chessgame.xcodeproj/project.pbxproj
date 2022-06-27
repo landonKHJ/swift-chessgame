@@ -18,6 +18,7 @@
 		44167A6628606E9A0005873B /* Piece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44167A6528606E9A0005873B /* Piece.swift */; };
 		44541E1528698D3000F89BAA /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44541E1428698D3000F89BAA /* Position.swift */; };
 		44541E19286990C200F89BAA /* PieceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44541E18286990C200F89BAA /* PieceCollectionViewCell.swift */; };
+		44541E1D2869C71700F89BAA /* Pawn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44541E1C2869C71700F89BAA /* Pawn.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		44167A6528606E9A0005873B /* Piece.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Piece.swift; sourceTree = "<group>"; };
 		44541E1428698D3000F89BAA /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
 		44541E18286990C200F89BAA /* PieceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieceCollectionViewCell.swift; sourceTree = "<group>"; };
+		44541E1C2869C71700F89BAA /* Pawn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pawn.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 		44167A6428606E430005873B /* Chess */ = {
 			isa = PBXGroup;
 			children = (
+				44541E1C2869C71700F89BAA /* Pawn.swift */,
 				44541E1428698D3000F89BAA /* Position.swift */,
 				44167A6228605E410005873B /* ChessBoard.swift */,
 				44167A6528606E9A0005873B /* Piece.swift */,
@@ -221,6 +224,7 @@
 				44167A6628606E9A0005873B /* Piece.swift in Sources */,
 				44167A3728605E180005873B /* ViewController.swift in Sources */,
 				44541E19286990C200F89BAA /* PieceCollectionViewCell.swift in Sources */,
+				44541E1D2869C71700F89BAA /* Pawn.swift in Sources */,
 				44541E1528698D3000F89BAA /* Position.swift in Sources */,
 				44167A6328605E410005873B /* ChessBoard.swift in Sources */,
 				44167A3328605E180005873B /* AppDelegate.swift in Sources */,

@@ -19,30 +19,15 @@ class ChessBoard {
         
         // 세 게임 작성
         // pieces = Array(repeating: Array(repeating: Piece(), count: 8), count: 8)
-        
         pieces = [
-            [Piece(type: .Luke, color: .Black),
-             Piece(type: .Knight, color: .Black),
-             Piece(type: .Bishop, color: .Black),
-             nil,
-             Piece(type: .Queen, color: .Black),
-             Piece(type: .Bishop, color: .Black),
-             Piece(type: .Knight, color: .Black),
-             Piece(type: .Luke, color: .Black)],
-            Array(repeating: Piece(type: .Pawn, color: .Black), count: 8),
+            [Luke(color: .Black), Knight(color: .Black), Bishop(color: .Black), nil, Queen(color: .Black), Bishop(color: .Black), Knight(color: .Black), Luke(color: .Black)],
+            Array(repeating: Pawn(color: .Black), count: 8),
             [nil,nil,nil,nil,nil,nil,nil,nil],
             [nil,nil,nil,nil,nil,nil,nil,nil],
             [nil,nil,nil,nil,nil,nil,nil,nil],
             [nil,nil,nil,nil,nil,nil,nil,nil],
-            Array(repeating: Piece(type: .Pawn, color: .White), count: 8),
-            [Piece(type: .Luke, color: .White),
-             Piece(type: .Knight, color: .White),
-             Piece(type: .Bishop, color: .White),
-             nil,
-             Piece(type: .Queen, color: .White),
-             Piece(type: .Bishop, color: .White),
-             Piece(type: .Knight, color: .White),
-             Piece(type: .Luke, color: .White)]
+            Array(repeating: Pawn(), count: 8),
+            [Luke(), Knight(), Bishop(), nil, Queen(), Bishop(), Knight(), Luke()]
         ]
     }
     
@@ -65,7 +50,7 @@ class ChessBoard {
         return pieces.flatMap { $0 }
             .compactMap { $0 }
             .filter { $0.color == color }
-            .compactMap { $0.type.score }
+            .compactMap { $0.score }
             .reduce(0, +)
     }
     
