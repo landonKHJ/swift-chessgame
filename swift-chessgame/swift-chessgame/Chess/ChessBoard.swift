@@ -72,8 +72,9 @@ class ChessBoard {
     // A1 -> (0,0) , H2 -> (1, 7) 형태로 index 튜플로 반환
     func interpreter(input: String) -> (Int, Int)? {
      
-        
-        
+        if let position = Position(input) {
+            return (position.file, position.rank)
+        }
         
         return nil
     }

@@ -18,7 +18,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
-        
+        self.collectionView.allowsMultipleSelection = true
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -36,6 +36,16 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         cell.configure(with: viewModel.pieces[indexPath.section][indexPath.row])
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath) as! PieceCollectionViewCell
+        cell.toggleSelected()
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath) as! PieceCollectionViewCell
+        cell.toggleSelected()
     }
 }
 

@@ -19,4 +19,12 @@ class PieceCollectionViewCell: UICollectionViewCell {
     public func configure(with model: Piece?) {
         display.text = model?.display() ?? "."
     }
+    
+    func toggleSelected () {
+        if (isSelected){
+            backgroundColor = .red
+        }else {
+            backgroundColor = .white
+        }
+    }
 }

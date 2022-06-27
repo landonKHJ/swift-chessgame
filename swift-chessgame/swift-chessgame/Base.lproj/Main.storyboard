@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pJc-9D-ysV">
-                                <rect key="frame" x="20" y="138" width="374" height="350"/>
+                                <rect key="frame" x="8" y="138" width="399" height="400"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="1" minimumInteritemSpacing="1" id="lSa-Rt-NQS">
                                     <size key="itemSize" width="16" height="16"/>
@@ -34,9 +34,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="16" height="16"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k31-Wz-goX">
-                                                    <rect key="frame" x="-8.5" y="1" width="33" height="14.5"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k31-Wz-goX">
+                                                    <rect key="frame" x="-12" y="-1" width="40" height="18"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -57,9 +57,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="pJc-9D-ysV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="94" id="RoU-nd-Uq7"/>
-                            <constraint firstItem="pJc-9D-ysV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="bcc-GD-Sde"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pJc-9D-ysV" secondAttribute="bottom" constant="374" id="fY3-Pf-Cy5"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pJc-9D-ysV" secondAttribute="trailing" constant="20" id="iiX-vu-Fep"/>
+                            <constraint firstItem="pJc-9D-ysV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="bcc-GD-Sde"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pJc-9D-ysV" secondAttribute="bottom" constant="324" id="fY3-Pf-Cy5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pJc-9D-ysV" secondAttribute="trailing" constant="7" id="iiX-vu-Fep"/>
                         </constraints>
                     </view>
                     <connections>
