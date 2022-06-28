@@ -8,6 +8,7 @@
 import Foundation
 
 class ChessBoard {
+    static let boardSize = 8
     
     var pieces: [[Piece?]] = []
     
@@ -17,17 +18,20 @@ class ChessBoard {
     
     func setupNewGame() {
         
+        // 말들을 Array 로 만들어두고, 각 말이 생성 가능한 위치들을 받아서 놓는 방식도 고려
+        // Pawn initialWhitePostion
+        
         // 세 게임 작성
         // pieces = Array(repeating: Array(repeating: Piece(), count: 8), count: 8)
         pieces = [
-            [Luke(color: .Black), Knight(color: .Black), Bishop(color: .Black), nil, Queen(color: .Black), Bishop(color: .Black), Knight(color: .Black), Luke(color: .Black)],
+            [Rook(color: .Black), Knight(color: .Black), Bishop(color: .Black), nil, Queen(color: .Black), Bishop(color: .Black), Knight(color: .Black), Rook(color: .Black)],
             Array(repeating: Pawn(color: .Black), count: 8),
             [nil,nil,nil,nil,nil,nil,nil,nil],
             [nil,nil,nil,nil,nil,nil,nil,nil],
             [nil,nil,nil,nil,nil,nil,nil,nil],
             [nil,nil,nil,nil,nil,nil,nil,nil],
             Array(repeating: Pawn(), count: 8),
-            [Luke(), Knight(), Bishop(), nil, Queen(), Bishop(), Knight(), Luke()]
+            [Rook(), Knight(), Bishop(), nil, Queen(), Bishop(), Knight(), Rook()]
         ]
     }
     
@@ -52,15 +56,5 @@ class ChessBoard {
             .filter { $0.color == color }
             .compactMap { $0.score }
             .reduce(0, +)
-    }
-    
-    // A1 -> (0,0) , H2 -> (1, 7) 형태로 index 튜플로 반환
-    func interpreter(input: String) -> (Int, Int)? {
-     
-        if let position = Position(input) {
-            return (position.file, position.rank)
-        }
-        
-        return nil
     }
 }

@@ -22,11 +22,11 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 8
+        return ChessBoard.boardSize
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 8
+        return ChessBoard.boardSize
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -53,7 +53,7 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         // Type Casting
         guard let flowLayout = collectionViewLayout as? UICollectionViewFlowLayout else { return CGSize() }
-        let numberOfCells: CGFloat = 8
+        let numberOfCells: CGFloat = CGFloat(ChessBoard.boardSize)
         let width = collectionView.frame.size.width - (flowLayout.minimumInteritemSpacing * (numberOfCells-1))
         return CGSize(width: width/(numberOfCells), height: width/(numberOfCells))
     }
